@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Order Online - LensCraft</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        body {
+            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background: #111;
+            padding: 15px 25px;
+        }
+
+        .navbar-brand {
+            color: #d4af37 !important;
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .nav-link {
+            color: #ddd !important;
+            margin-left: 15px;
+        }
+
+        .nav-link:hover {
+            color: #d4af37 !important;
+        }
+
+        .page-header {
+            margin-top: 45px;
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .order-box {
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .gold-btn {
+            background: #d4af37;
+            border: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 800px) {
+
+            .nav-link {
+                margin-left: 0;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container-fluid">
+
+        <a class="navbar-brand"
+           href="index.html">
+            LENSCRAFT
+        </a>
+
+
+        <button class="navbar-toggler bg-light"
+                type="button"
+                onclick="toggleMenu()">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse"
+             id="navLinks">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="cameras.html">Cameras</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="lenses.html">Lenses</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="accessories.html">Accessories</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="explore.html">Explore</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">
+                        <i class="bi bi-cart3"></i> Cart
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<section class="page-header">
+
+    <h1>
+        Order Online
+    </h1>
+
+    <p>
+        Place your order for photography equipment.
+    </p>
+
+</section>
+
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-7">
+
+                <div class="order-box">
+
+                    <h3 class="mb-4">
+                        Customer Details
+                    </h3>
+
+
+                    <form onsubmit="placeOrder(event)">
+
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Full Name
+                            </label>
+
+                            <input type="text"
+                                   id="name"
+                                   class="form-control">
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Email
+                            </label>
+
+                            <input type="email"
+                                   id="email"
+                                   class="form-control">
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Select Product
+                            </label>
+
+                            <select id="product"
+                                    class="form-select">
+
+                                <option value="">
+                                    Select a product
+                                </option>
+
+                                <option>
+                                    Canon EOS 90D
+                                </option>
+
+                                <option>
+                                    Nikon D7500
+                                </option>
+
+                                <option>
+                                    Sony Alpha
+                                </option>
+
+                                <option>
+                                    Fujifilm X-T5
+                                </option>
+
+                                <option>
+                                    70-200mm Zoom Lens
+                                </option>
+
+                                <option>
+                                    Professional Tripod
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Quantity
+                            </label>
+
+                            <input type="number"
+                                   id="quantity"
+                                   class="form-control"
+                                   min="1">
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Address
+                            </label>
+
+                            <textarea id="address"
+                                      class="form-control"
+                                      rows="4"></textarea>
+
+                        </div>
+
+
+                        <button class="btn gold-btn w-100">
+
+                            PLACE ORDER
+
+                        </button>
+
+
+                    </form>
+
+
+                    <div id="orderMessage"
+                         class="mt-4 fw-bold text-center">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer class="text-center">
+
+    <h4>
+        LensCraft Camera Store
+    </h4>
+
+    <p>
+        Thank you for choosing LensCraft.
+    </p>
+
+</footer>
+
+
+<script>
+
+    console.log("Order Page Loaded");
+
+
+    function toggleMenu() {
+
+        document
+            .getElementById("navLinks")
+            .classList.toggle("show");
+
+    }
+
+
+    function placeOrder(event) {
+
+        event.preventDefault();
+
+
+        let name =
+            document.getElementById("name").value;
+
+        let email =
+            document.getElementById("email").value;
+
+        let product =
+            document.getElementById("product").value;
+
+        let quantity =
+            document.getElementById("quantity").value;
+
+        let address =
+            document.getElementById("address").value;
+
+
+        if (
+            name == "" ||
+            email == "" ||
+            product == "" ||
+            quantity == "" ||
+            address == ""
+        ) {
+
+            window.alert(
+                "Please fill all the details."
+            );
+
+            return;
+
+        }
+
+
+        document.getElementById("orderMessage").innerHTML =
+
+            "Thank you <strong>" +
+            name +
+            "</strong>! Your order for <strong>" +
+            quantity +
+            " × " +
+            product +
+            "</strong> has been received.";
+
+        console.log(
+            "Order placed for: " + product
+        );
+
+        window.alert(
+            "Order placed successfully!"
+        );
+
+    }
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>

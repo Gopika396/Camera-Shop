@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Accessories - LensCraft</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        body {
+            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background: #111;
+            padding: 15px 25px;
+        }
+
+        .navbar-brand {
+            color: #d4af37 !important;
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .nav-link {
+            color: #ddd !important;
+            margin-left: 15px;
+        }
+
+        .nav-link:hover {
+            color: #d4af37 !important;
+        }
+
+        .page-header {
+            margin-top: 45px;
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .accessory-card {
+            border: none;
+            transition: 0.4s;
+        }
+
+        .accessory-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+
+        .accessory-card img {
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .gold-btn {
+            background: #d4af37;
+            border: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 800px) {
+
+            .nav-link {
+                margin-left: 0;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container-fluid">
+
+        <a class="navbar-brand"
+           href="index.html">
+            LENSCRAFT
+        </a>
+
+
+        <button class="navbar-toggler bg-light"
+                type="button"
+                onclick="toggleMenu()">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse"
+             id="navLinks">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="cameras.html">
+                        Cameras
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="lenses.html">
+                        Lenses
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="accessories.html">
+                        Accessories
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="explore.html">
+                        Explore
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">
+                        <i class="bi bi-cart3"></i>
+                        Cart
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<section class="page-header">
+
+    <h1>
+        Camera Accessories
+    </h1>
+
+    <p>
+        Complete your photography setup.
+    </p>
+
+</section>
+
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+
+            <div class="col-md-4">
+
+                <div class="card accessory-card">
+
+                    <img src="images/tripod.jpg"
+                         class="card-img-top"
+                         alt="Tripod">
+
+                    <div class="card-body text-center">
+
+                        <h4>
+                            Professional Tripod
+                        </h4>
+
+                        <p>
+                            Stable tripod for
+                            photography and video.
+                        </p>
+
+                        <h5>
+                            ₹8,500
+                        </h5>
+
+                        <button class="btn gold-btn"
+                                onclick="addAccessory('Professional Tripod',8500)">
+
+                            ADD TO CART
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card accessory-card">
+
+                    <img src="images/camera-bag.jpg"
+                         class="card-img-top"
+                         alt="Camera Bag">
+
+                    <div class="card-body text-center">
+
+                        <h4>
+                            Camera Backpack
+                        </h4>
+
+                        <p>
+                            Protective bag for cameras
+                            and lenses.
+                        </p>
+
+                        <h5>
+                            ₹5,500
+                        </h5>
+
+                        <button class="btn gold-btn"
+                                onclick="addAccessory('Camera Backpack',5500)">
+
+                            ADD TO CART
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card accessory-card">
+
+                    <img src="images/memory-card.jpg"
+                         class="card-img-top"
+                         alt="Memory Card">
+
+                    <div class="card-body text-center">
+
+                        <h4>
+                            128GB Memory Card
+                        </h4>
+
+                        <p>
+                            High-speed storage for
+                            photos and videos.
+                        </p>
+
+                        <h5>
+                            ₹2,500
+                        </h5>
+
+                        <button class="btn gold-btn"
+                                onclick="addAccessory('128GB Memory Card',2500)">
+
+                            ADD TO CART
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer class="text-center">
+
+    <h4>
+        LensCraft Camera Store
+    </h4>
+
+    <p>
+        Accessories for every photographer.
+    </p>
+
+</footer>
+
+
+<script>
+
+    console.log("Accessories Page Loaded");
+
+
+    function toggleMenu() {
+
+        document
+            .getElementById("navLinks")
+            .classList.toggle("show");
+
+    }
+
+
+    function addAccessory(name, price) {
+
+        window.alert(
+            name + " has been added to your cart!"
+        );
+
+        console.log(
+            "Accessory selected: " + name
+        );
+
+        window.location.href =
+            "cart.html?product=" +
+            encodeURIComponent(name) +
+            "&price=" +
+            price;
+
+    }
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>
